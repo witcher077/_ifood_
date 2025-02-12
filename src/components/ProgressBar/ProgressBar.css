@@ -1,0 +1,83 @@
+.progressBar {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  
+    .steps {
+      border: 1px solid black;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+  
+    &::before {
+      position: absolute;
+      content: "";
+      height: 5px;
+      width: 100%;
+      background-color: gray;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  
+    &.first {
+      &::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 0%;
+        background-color: green;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: width 1s ease-in-out;
+      }
+    }
+  
+    &.second {
+      &::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 33.33%;
+        background-color: green;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: width 1s ease-in-out;
+      }
+    }
+  
+    &.third {
+      &::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 66.66%;
+        background-color: green;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: width 1s ease-in-out;
+      }
+    }
+    &.full {
+      &::after {
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 100%;
+        background-color: green;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        transition: width 1s ease-in-out;
+      }
+    }
+  }
