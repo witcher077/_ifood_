@@ -50,7 +50,7 @@ const Home = () => {
   }
   return (
   <div className='dark:bg-gray-900'>
-    <div className=" px-8 py-2 flex flex-col items-center">
+    <div className=" lg:px-8 px-2 py-2 flex flex-col items-center">
       <div className=" text-orange-800 font-extrabold text-3xl">Spacial Today </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4  py-4  h-auto items-center">
         {/* Product Card */}
@@ -79,9 +79,9 @@ const Home = () => {
 
         {/* YouTube Video */}
         <div className="w-full h-[360px] flex flex-col items-center gap-8 justify-center">
-          <h1 className="font-extrabold text-blue-800 text-3xl">Watch full Recipe  on Youtube</h1>
+          <h1 className="font-extrabold text-blue-800 lg:text-3xl text-2xl  ">Watch full Recipe  on Youtube</h1>
           <iframe
-            className="w-3/5 sm:w-4/5 h-3/5 sm:h-full rounded-md shadow-lg"
+            className="lg:w-3/5 w-full h-3/5 sm:h-full rounded-md shadow-lg"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube video player"
             frameBorder="0"
@@ -123,7 +123,7 @@ const Home = () => {
             <Link to={`/foodcategori/${ele.strCategory}`} className='rounded-md p-2 flex-shrink-0' key={ele.idCategory}>
               <div className="rounded-full shadow-md">
                 <img
-                  className="rounded-md w-36 h-36"
+                  className="rounded-md lg:w-36 Lg:h-36 w-24 h-24"
                   src={ele.strCategoryThumb}
                   alt={ele.strCategory}
                 />
